@@ -8,7 +8,7 @@ function App() {
   const [isOpen, setisOpen] = useState(false);
   const [unicornSize, setunicornSize] = useState(10);
   const [lionSize, setlionSize] = useState(10);
-  const [animals, setanimals] = useState(['frog', 'bird']);
+  const [animals, setAnimals] = useState(['frog', 'bird', 'alligator']);
 
   const sizeModifier = 1;
 
@@ -37,8 +37,8 @@ function App() {
             <button onClick={() => setlionSize(lionSize - sizeModifier)}>Lion is hurt!</button>
           </div>
         </div>
-        <OpenandClosed />
-        <AnimalParade />
+        <OpenandClosed setisOpen={setisOpen} isOpen={isOpen} />
+        <AnimalParade setAnimal={setAnimals} animals={animals} />
       </header>
     </div>
   );

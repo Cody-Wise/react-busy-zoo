@@ -10,8 +10,10 @@ export default function OpenandClosed({ isOpen, setisOpen }) {
   }
 
   return (
-    <div>
-      <div>{isOpen ? 'Welcome to the Zoo!' : 'We are closed please go away!'}</div>
+    <div className="open-sign">
+      <div>
+        <h1>{isOpen ? 'Welcome to the Zoo!' : 'We are closed please go away!'}</h1>
+      </div>
       <button onClick={handleOpenZoo}>Open Zoo</button>
       <button onClick={handleCloseZoo}>Close Zoo</button>
     </div>

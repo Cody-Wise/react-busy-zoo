@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import AnimalParade from './AnimalParade';
 import OpenandClosed from './OpenandClosed';

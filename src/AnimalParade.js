@@ -22,7 +22,7 @@ export default function AnimalParade({ animals, setAnimals }) {
       <div className="animal">
         {animals.map((animal) => (
           <AnimalEmoji key={animal} animal={animal} />
-        ))}{' '}
+        ))}
       </div>
       <div className="animal-buttons">
         <button onClick={handleAddFrog}>Add Frog</button>

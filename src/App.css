@@ -28,6 +28,50 @@
   color: #61dafb;
 }
 
+.fighting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  height: 10vh;
+}
+
+.fight {
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.open-sign {
+  margin-bottom: 50px;
+}
+
+.animal {
+  display: flex;
+}
+
+header {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  height: 40px;
+  background-color: rgba(144, 190, 35, 0.836);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+  font-family: 'Space and Astronomy';
+}
+
+/* .monster {
+  height: 220px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +79,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.chart {
+  height: 700px;
 }

@@ -80,3 +80,7 @@ header {
     transform: rotate(360deg);
   }
 }
+
+.chart {
+  height: 700px;
+}

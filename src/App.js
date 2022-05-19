@@ -2,6 +2,9 @@ import './App.css';
 import AnimalParade from './AnimalParade';
 import OpenandClosed from './OpenandClosed';
 import { useState } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Admin from './Admin';
+import ZooPage from './ZooPage';
 
 function App() {
   const [isOpen, setisOpen] = useState(false);
@@ -12,40 +15,33 @@ function App() {
   const sizeModifier = 1;
 
   return (
-    <div className="App">
-      <header>
-        <h1>Welcome to the Wise Zoo</h1>
-      </header>
-      <main className="App-header">
-        <OpenandClosed setisOpen={setisOpen} isOpen={isOpen} />
-        <h2>Lion vs Unicorn in a DeathMatch</h2>
-        <div className="fighting">
-          <div className="fight">
-            <div className="monster">
-              <img src="unicorn.png" width={unicornSize * 10} />
-              <div className="buttons" />
-              <button onClick={() => setunicornSize(unicornSize + sizeModifier)}>
-                Unicorn is powering up
-              </button>
-              <button onClick={() => setunicornSize(unicornSize - sizeModifier)}>
-                Unicorn is hurt!
-              </button>
-            </div>
-          </div>
-          <div className="fight">
-            <div className="monster">
-              <img src="lion.png" width={lionSize * 10} />
-              <div className="buttons" />
-              <button onClick={() => setlionSize(lionSize + sizeModifier)}>
-                Lion is powering up
-              </button>
-              <button onClick={() => setlionSize(lionSize - sizeModifier)}>Lion is hurt!</button>
-            </div>
-          </div>
+    <>
+      <Router>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Zoo</Link>
+              </li>
+              <li>
+                <Link to="/admin">Admin</Link>
+              </li>
+            </ul>
+          </nav>
+
+          {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+          <Switch>
+            <Route path="/admin">
+              <Admin />
+            </Route>
+            <Route path="/">
+              <ZooPage />
+            </Route>
+          </Switch>
         </div>
-        <AnimalParade setAnimals={setAnimals} animals={animals} />
-      </main>
-    </div>
+      </Router>
+    </>
   );
 }
 

@@ -2,6 +2,7 @@ import React from 'react';
 import AnimalParade from './AnimalParade';
 import OpenandClosed from './OpenandClosed';
 import { useState } from 'react';
+import CustomButton from './CustomButton';
 
 export default function ZooPage() {
   const [isOpen, setisOpen] = useState(false);
@@ -23,22 +24,24 @@ export default function ZooPage() {
             <div className="monster">
               <img src="unicorn.png" width={unicornSize * 10} />
               <div className="buttons" />
-              <button onClick={() => setunicornSize(unicornSize + sizeModifier)}>
+              <CustomButton onClick={() => setunicornSize(unicornSize + sizeModifier)}>
                 Unicorn is powering up
-              </button>
-              <button onClick={() => setunicornSize(unicornSize - sizeModifier)}>
+              </CustomButton>
+              <CustomButton onClick={() => setunicornSize(unicornSize - sizeModifier)}>
                 Unicorn is hurt!
-              </button>
+              </CustomButton>
             </div>
           </div>
           <div className="fight">
             <div className="monster">
               <img src="lion.png" width={lionSize * 10} />
               <div className="buttons" />
-              <button onClick={() => setlionSize(lionSize + sizeModifier)}>
+              <CustomButton onClick={() => setlionSize(lionSize + sizeModifier)}>
                 Lion is powering up
-              </button>
-              <button onClick={() => setlionSize(lionSize - sizeModifier)}>Lion is hurt!</button>
+              </CustomButton>
+              <CustomButton onClick={() => setlionSize(lionSize - sizeModifier)}>
+                Lion is hurt!
+              </CustomButton>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import CustomButton from './CustomButton';
 
 export default function OpenandClosed({ isOpen, setisOpen }) {
   function handleOpenZoo() {
@@ -14,8 +15,8 @@ export default function OpenandClosed({ isOpen, setisOpen }) {
       <div>
         <h1>{isOpen ? 'Welcome to the Zoo!' : 'We are closed please go away!'}</h1>
       </div>
-      <button onClick={handleOpenZoo}>Open Zoo</button>
-      <button onClick={handleCloseZoo}>Close Zoo</button>
+      <CustomButton onClick={handleOpenZoo}>Open Zoo</CustomButton>
+      <CustomButton onClick={handleCloseZoo}>Close Zoo</CustomButton>
     </div>
   );
 }

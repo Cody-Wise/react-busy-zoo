@@ -1,5 +1,6 @@
 import React from 'react';
 import AnimalEmoji from './AnimalEmoji';
+import CustomButton from './CustomButton';
 
 export default function AnimalParade({ animals, setAnimals }) {
   function handleAddFrog() {
@@ -25,9 +26,9 @@ export default function AnimalParade({ animals, setAnimals }) {
         ))}
       </div>
       <div className="animal-buttons">
-        <button onClick={handleAddFrog}>Add Frog</button>
-        <button onClick={handleAddBird}>Add Bird</button>
-        <button onClick={handleAddAlligator}>Add Alligator</button>
+        <CustomButton onClick={handleAddFrog}>Add Frog</CustomButton>
+        <CustomButton onClick={handleAddBird}>Add Bird</CustomButton>
+        <CustomButton onClick={handleAddAlligator}>Add Alligator</CustomButton>
       </div>
     </>
   );
